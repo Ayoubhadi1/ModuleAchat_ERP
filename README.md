@@ -6,8 +6,6 @@
 - Pipeline CI/CD avec gitlab ci , docker ...
 #### Les outils :
 - Spring boot / kotlin , mariaDB , Keycloak , GitLab CI/CD , docker , OpenVPN ...
--les acteurs :
-* Adminitrateur - Employé - utlisateur simple
 
 
 
