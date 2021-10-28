@@ -1,0 +1,27 @@
+## content of /src/main/resources/application.yml
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/compta_demo
+    username: root
+    password:
+    #url: jdbc:mariadb://192.168.11.2:3306/compta_demo
+    #username: root
+    #password: supersecret
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8098
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on_trace_param
+    include-exception: false
+

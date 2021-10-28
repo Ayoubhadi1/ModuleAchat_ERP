@@ -1,0 +1,32 @@
+stages:
+  - build
+  - test
+  - docker
+
+maven-build:
+  stage: build
+  script: 
+    - export PATH=/opt/apache-maven-3.8.2/bin:$PATH
+    - mvn install -DskipTests
+  artifacts:
+    paths:
+      - target/*.jar
+
+test :
+  stage : test
+  script :
+    - echo "test"
+
+docker-build:
+  stage: docker
+  script:
+    - docker build -t worldaudittt .
+  only :
+    - develop
+docker-run:
+  stage: docker
+  script:
+    - docker run -d -p 8098:8098 --name worldaudittt --link bd-xcompta worldaudittt
+  
+  only :
+    - develop

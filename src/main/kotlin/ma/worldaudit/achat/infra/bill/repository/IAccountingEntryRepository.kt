@@ -1,0 +1,9 @@
+package ma.worldaudit.achat.infra.bill.repository
+import ma.worldaudit.achat.infra.model.AccountingEntry
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
+
+@Repository
+interface IAccountingEntryRepository : JpaRepository<AccountingEntry, Long> {
+    fun findByRefFacture(refFacture:String):List<AccountingEntry>
+}
