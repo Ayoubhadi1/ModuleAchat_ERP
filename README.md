@@ -1,1 +1,12 @@
+# Module d'achat d'un ERP
+###### Ce Backend d'application permet de :
+- Gérer les factures(fournisseur , articles ...)
+- Générer les écritures comptables des articles achetés
+- Générer les immobilisations et les amortissements
+#### Les outils :
+- Spring boot / kotlin , mariaDB , Keycloak , GitLab CI/CD , docker , OpenVPN ...
+-les acteurs :
+* Adminitrateur - Employé - utlisateur simple
+
+
 
